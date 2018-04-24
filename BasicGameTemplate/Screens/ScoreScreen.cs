@@ -25,9 +25,9 @@ namespace BasicGameTemplate
             highscores = Form1.service.getHighscores();
             foreach (GameSystemServices.Highscore highscore in highscores)
             {
-                Rank.Text += highscore.Rank + ".\n";
-                PlayerName.Text += highscore.Name + "\n";
-                Score.Text += "Level " + highscore.Score + "\n";
+                rankLabel.Text += highscore.Rank + ".\n";
+                playerNameLabel.Text += highscore.Name + "\n";
+                scoreLabel.Text += "Level " + highscore.Score + "\n";
             }
         }
 

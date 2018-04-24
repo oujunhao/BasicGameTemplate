@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.Rank = new System.Windows.Forms.Label();
-            this.PlayerName = new System.Windows.Forms.Label();
-            this.Score = new System.Windows.Forms.Label();
+            this.rankLabel = new System.Windows.Forms.Label();
+            this.playerNameLabel = new System.Windows.Forms.Label();
+            this.scoreLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("8BIT WONDER", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Courier New", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.label1.Name = "label1";
@@ -47,45 +47,45 @@
             this.label1.Text = "HIGHSCORES";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Rank
+            // rankLabel
             // 
-            this.Rank.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Rank.Font = new System.Drawing.Font("8BIT WONDER", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Rank.Location = new System.Drawing.Point(0, 57);
-            this.Rank.Name = "Rank";
-            this.Rank.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.Rank.Size = new System.Drawing.Size(43, 207);
-            this.Rank.TabIndex = 1;
-            this.Rank.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.rankLabel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.rankLabel.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rankLabel.Location = new System.Drawing.Point(0, 57);
+            this.rankLabel.Name = "rankLabel";
+            this.rankLabel.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.rankLabel.Size = new System.Drawing.Size(43, 207);
+            this.rankLabel.TabIndex = 1;
+            this.rankLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // PlayerName
+            // playerNameLabel
             // 
-            this.PlayerName.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PlayerName.Font = new System.Drawing.Font("8BIT WONDER", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlayerName.Location = new System.Drawing.Point(43, 57);
-            this.PlayerName.Name = "PlayerName";
-            this.PlayerName.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.PlayerName.Size = new System.Drawing.Size(220, 207);
-            this.PlayerName.TabIndex = 2;
+            this.playerNameLabel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.playerNameLabel.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerNameLabel.Location = new System.Drawing.Point(43, 57);
+            this.playerNameLabel.Name = "playerNameLabel";
+            this.playerNameLabel.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.playerNameLabel.Size = new System.Drawing.Size(220, 207);
+            this.playerNameLabel.TabIndex = 2;
             // 
-            // Score
+            // scoreLabel
             // 
-            this.Score.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Score.Font = new System.Drawing.Font("8BIT WONDER", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Score.Location = new System.Drawing.Point(187, 57);
-            this.Score.Name = "Score";
-            this.Score.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.Score.Size = new System.Drawing.Size(107, 207);
-            this.Score.TabIndex = 3;
+            this.scoreLabel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.scoreLabel.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreLabel.Location = new System.Drawing.Point(187, 57);
+            this.scoreLabel.Name = "scoreLabel";
+            this.scoreLabel.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.scoreLabel.Size = new System.Drawing.Size(107, 207);
+            this.scoreLabel.TabIndex = 3;
             // 
             // ScoreScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.Controls.Add(this.Score);
-            this.Controls.Add(this.PlayerName);
-            this.Controls.Add(this.Rank);
+            this.Controls.Add(this.scoreLabel);
+            this.Controls.Add(this.playerNameLabel);
+            this.Controls.Add(this.rankLabel);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ScoreScreen";
@@ -99,8 +99,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label Rank;
-        private System.Windows.Forms.Label PlayerName;
-        private System.Windows.Forms.Label Score;
+        private System.Windows.Forms.Label rankLabel;
+        private System.Windows.Forms.Label playerNameLabel;
+        private System.Windows.Forms.Label scoreLabel;
     }
 }
