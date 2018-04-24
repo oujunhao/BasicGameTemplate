@@ -69,6 +69,9 @@ namespace BasicGameTemplate
                 case "GameScreen":
                     ns = new GameScreen();
                     break;
+                case "ScoreScreen":
+                    ns = new ScoreScreen();
+                    break;
             }
 
             ns.Size = new Size(ns.Width, ns.Height);

@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Screens\ScoreScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\ScoreScreen.Designer.cs">
+      <DependentUpon>ScoreScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\MenuScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -82,12 +88,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Screens\GameScreen.resx">
       <DependentUpon>GameScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\MenuScreen.resx">
       <DependentUpon>MenuScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ScoreScreen.resx">
+      <DependentUpon>ScoreScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -102,6 +112,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arcade_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arcade_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_50x50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_50x50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_50x50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_50x50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

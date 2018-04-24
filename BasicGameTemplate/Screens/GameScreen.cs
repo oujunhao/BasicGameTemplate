@@ -29,6 +29,31 @@ namespace BasicGameTemplate
             //Form1.service.startGame();
         }
 
+        public void PauseScreen()
+        {
+            gameTimer.Enabled = false;
+
+            leftArrowDown = downArrowDown = rightArrowDown = upArrowDown = bDown = nDown = mDown = spaceDown = false;
+            aDown = sDown = dDown = wDown = cDown = vDown = xDown = zDown = false;
+
+            //dispay a message
+            Graphics g = this.CreateGraphics();
+            SolidBrush sb = new SolidBrush(Color.FromArgb(50, 0, 0, 0));
+            SolidBrush textBrush = new SolidBrush(Color.White);
+
+            Font f = new Font("Arial", 12);
+
+            g.FillRectangle(sb, ClientRectangle);  //ClientRectangle is rectangle the size of control
+
+            StringFormat sf = new StringFormat();
+           // sf.LineAlignment = StringAlignment.Center; // align the y value
+            sf.Alignment = StringAlignment.Center;  // align the x value
+            //g.DrawString("My String", this.Font, Brushes.Black, ClientRectangle, sf);
+
+            g.DrawString("Press Green Button to Continue \n" +
+                "Press Red Button to Exit", f, textBrush, this.Width/2 , 150, sf);
+        }
+
         private void GameScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             //when the escape key is pressed the game ends and goes back to the main menu
@@ -38,6 +63,8 @@ namespace BasicGameTemplate
                 // This can be duplicated wherever the game will end, such as a collision or timeout
                 // You do need to use your own variable for scoring
                 //Form1.service.endGame(yourScoreVariable);
+                PauseScreen();
+                //Form1.changeScreen(this, "MenuScreen");
             }
 
             //player 1 button presses
@@ -54,6 +81,14 @@ namespace BasicGameTemplate
                     break;
                 case Keys.Up:
                     upArrowDown = true;
+                    break;
+                case Keys.Space:
+                    if (gameTimer.Enabled) { spaceDown = true; }
+                    else { gameTimer.Enabled = true; }
+                    break;
+                case Keys.M:
+                    if (gameTimer.Enabled) { mDown = true; }
+                    else { Form1.changeScreen(this, "MenuScreen"); }
                     break;
             }
         }
