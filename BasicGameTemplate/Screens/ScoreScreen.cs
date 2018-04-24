@@ -12,9 +12,23 @@ namespace BasicGameTemplate
 {
     public partial class ScoreScreen : UserControl
     {
+
+        IList<GameSystemServices.Highscore> highscores;
+
         public ScoreScreen()
         {
             InitializeComponent();
+        }
+
+        private void ScoreScreen_Load(object sender, EventArgs e)
+        {
+            highscores = Form1.service.getHighscores();
+            foreach (GameSystemServices.Highscore highscore in highscores)
+            {
+                Rank.Text += highscore.Rank + ".\n";
+                PlayerName.Text += highscore.Name + "\n";
+                Score.Text += "Level " + highscore.Score + "\n";
+            }
         }
 
         private void ScoreScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)

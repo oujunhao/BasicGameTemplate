@@ -14,6 +14,11 @@ namespace BasicGameTemplate
     public partial class Form1 : Form
     {
         // Copy code from your game at http://138.197.136.94:5000/games
+        // It should look like:
+        const string gameToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJnYW1lSWQiOiI1YWRhMTRlYTQ5NWExZjA3YzkwZmI1NjAiLCJjYXJkSWQiOiIxIiwiaWF0IjoxNTI0NTg5NDc4fQ.2Ck8GZgw68hLlGDOBuyj7QZE7rN68KZW3AmaT3EYvwo";
+        // If you leave this the way it is, it won't work
+        public static Service service = new Service(Environment.GetCommandLineArgs(), gameToken);
+        // Delete the above three lines after you've copied
 
         bool fullScreen = false;  // true: program runs fullscreen || false: program runs in window
        
