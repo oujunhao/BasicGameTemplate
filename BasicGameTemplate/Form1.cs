@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GameSystemServices;
 
 namespace BasicGameTemplate
 {
     public partial class Form1 : Form
     {
-        
+        // Copy code from your game at http://138.197.136.94:5000/games
+
         bool fullScreen = false;  // true: program runs fullscreen || false: program runs in window
        
         public Form1()

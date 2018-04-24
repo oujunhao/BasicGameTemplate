@@ -23,12 +23,21 @@ namespace BasicGameTemplate
             InitializeComponent();
         }
 
+        private void GameScreen_Load(object sender, EventArgs e)
+        {
+            // You can move this line to wherever you start your game
+            //Form1.service.startGame();
+        }
+
         private void GameScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             //when the escape key is pressed the game ends and goes back to the main menu
             if (e.KeyCode == Keys.Escape)
             {
                 Form1.changeScreen(this, "MenuScreen");
+                // This can be duplicated wherever the game will end, such as a collision or timeout
+                // You do need to use your own variable for scoring
+                //Form1.service.endGame(yourScoreVariable);
             }
 
             //player 1 button presses
