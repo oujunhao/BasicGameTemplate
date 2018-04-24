@@ -35,10 +35,17 @@ namespace BasicGameTemplate
             Form1.changeScreen(this, "GameScreen");
         }
 
+        private void scoresButton_Click(object sender, EventArgs e)
+        {
+            Form1.changeScreen(this, "ScoreScreen");
+        }
+
         private void exitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+
 
         private void exitButton_Enter(object sender, EventArgs e)
         {
@@ -62,6 +69,7 @@ namespace BasicGameTemplate
             Button btn = (Button)sender;
             btn.BackColor = buttonActiveColor;
         }
+
 
     }
 }
